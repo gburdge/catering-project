@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.public',
     'south',
+    'rest_framework'
 )
 
 MIDDLEWARE_CLASSES = (
