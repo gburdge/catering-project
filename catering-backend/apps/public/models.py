@@ -6,10 +6,10 @@ from django.db import models
 class Company(models.Model):
     name = models.CharField(max_length=100)
     address = models.TextField()
-    phone = models.IntegerField(max_length=9)
+    phone = models.IntegerField(max_length=10)
     cuisine = models.ForeignKey("Cuisine")
     menu = models.OneToOneField("Menu", null=True, blank=True)
-    image = models.CharField(max_length=500, default="no image")
+    image = models.CharField(max_length=500, default="image")
 
     def __unicode__(self):
         return self.name
@@ -22,13 +22,18 @@ class Menu(models.Model):
         return self.name
 
 
-class FoodItems(models.Model):
+class FoodItem(models.Model):
     name = models.CharField(max_length=100)
     type = models.TextField()
     price = models.IntegerField(max_length=9)
     image = models.CharField(max_length=500, default="no image")
 
+    def __unicode__(self):
+        return self.name
+
 
 class Cuisine(models.Model):
     name = models.CharField(max_length=50)
 
+    def __unicode__(self):
+        return self.name
