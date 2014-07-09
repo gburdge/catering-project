@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 my_django_project
-=======
-my_django_project?
->>>>>>> 179b13b51d30a164f7e61f0b54ce723a36699ec1
-================
+=================
 
 my_django_project
 
