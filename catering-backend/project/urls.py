@@ -15,4 +15,7 @@ urlpatterns = patterns('',
     url(r'^menus/$', MenuList.as_view(), name='menu-list'),
     url(r'^fooditem/$', FoodItem.as_view(), name='food-list'),
     url(r'^cuisines/$', CuisineList.as_view(), name='cuisine-list'),
-)
+    url(r'^order/$', OrderList.as_view(), name='order-list'),
+    url(r'^food_order/$', Food_orderList.as_view(), name='food_order-list'),
+
+    )

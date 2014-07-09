@@ -33,7 +33,23 @@ class FoodItem(models.Model):
 
 
 class Cuisine(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.TextField(max_length=50)
+
+    def __unicode__(self):
+        return self.name
+
+class Order(models.Model):
+    delivery_date = models.DateField(max_length=25)
+    delivery_time = models.TimeField(max_length=10)
+    order = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return self.name
+
+
+class Food_order(models.Model):
+    food_item = models.TextField(max_length=25)
+    quantity = models.IntegerField(max_length=10)
 
     def __unicode__(self):
         return self.name

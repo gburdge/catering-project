@@ -20,3 +20,12 @@ class FoodItemSerializer(serializers.ModelSerializer):
 class CuisineSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cuisine
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+
+class Food_orderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Food_order
