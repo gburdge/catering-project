@@ -28,7 +28,7 @@ class OrderList(generics.ListAPIView):
     queryset = Order.objects.all()
 
 
-class Food_orderList(generics.ListAPIView):
-    model = Food_order
+class FoodOrderList(generics.ListAPIView):
+    model = FoodOrder
     serializer_class = Food_orderSerializer
-    queryset = Food_order.objects.all()
+    queryset = FoodOrder.objects.all()
