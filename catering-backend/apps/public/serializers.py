@@ -17,10 +17,6 @@ class FoodItemSerializer(serializers.ModelSerializer):
         model = FoodItem
 
 
-class CuisineSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Cuisine
-
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
