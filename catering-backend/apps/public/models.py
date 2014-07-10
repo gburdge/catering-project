@@ -5,7 +5,7 @@ from django.db import models
 
 class Company(models.Model):
     name = models.CharField(max_length=100)
-    address = models.TextField()
+    address = models.CharField(max_length=60)
     phone = models.IntegerField(max_length=10)
     cuisine = models.ForeignKey("Cuisine")
     menu = models.OneToOneField("Menu", null=True, blank=True)
@@ -23,8 +23,8 @@ class Menu(models.Model):
 
 
 class FoodItem(models.Model):
-    name = models.CharField(max_length=100)
-    type = models.TextField()
+    name = models.CharField(max_length=25)
+    type = models.CharField(max_length=25)
     price = models.IntegerField(max_length=9)
     image = models.CharField(max_length=500, default="no image")
 
@@ -33,7 +33,7 @@ class FoodItem(models.Model):
 
 
 class Cuisine(models.Model):
-    name = models.TextField(max_length=50)
+    name = models.CharField(max_length=15)
 
     def __unicode__(self):
         return self.name
@@ -41,14 +41,14 @@ class Cuisine(models.Model):
 class Order(models.Model):
     delivery_date = models.DateField(max_length=25)
     delivery_time = models.TimeField(max_length=10)
-    order = models.CharField(max_length=100)
+    order = models.TextField(max_length=100)
 
     def __unicode__(self):
         return self.name
 
 
 class Food_order(models.Model):
-    food_item = models.TextField(max_length=25)
+    food_item = models.CharField(max_length=25)
     quantity = models.IntegerField(max_length=10)
 
     def __unicode__(self):
