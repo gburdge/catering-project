@@ -7,7 +7,6 @@ class Company(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=60)
     phone = models.IntegerField(max_length=10)
-    cuisine = models.ForeignKey("Cuisine")
     menu = models.OneToOneField("Menu", null=True, blank=True)
     image = models.CharField(max_length=500, default="image")
 
@@ -31,12 +30,6 @@ class FoodItem(models.Model):
     def __unicode__(self):
         return self.name
 
-
-class Cuisine(models.Model):
-    name = models.CharField(max_length=15)
-
-    def __unicode__(self):
-        return self.name
 
 class Order(models.Model):
     delivery_date = models.DateField(max_length=25)
