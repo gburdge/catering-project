@@ -22,12 +22,6 @@ class FoodItem(generics.ListAPIView):
     queryset = FoodItem.objects.all()
 
 
-class CuisineList(generics.ListAPIView):
-    model = Cuisine
-    serializer_class = CuisineSerializer
-    queryset = Cuisine.objects.all()
-
-
 class OrderList(generics.ListAPIView):
     model = Order
     serializer_class = OrderSerializer

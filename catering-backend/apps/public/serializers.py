@@ -6,16 +6,13 @@ class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
 
-
 class MenuSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menu
 
-
 class FoodItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodItem
-
 
 
 class OrderSerializer(serializers.ModelSerializer):
