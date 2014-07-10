@@ -7,7 +7,7 @@ class Company(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=60)
     phone = models.IntegerField(max_length=10)
-    menu = models.OneToOneField("Menu", null=True, blank=True)
+    menu = models.OneToOneField("Menu", null=False, blank=False)
     image = models.CharField(max_length=500, default="image")
 
     def __unicode__(self):
