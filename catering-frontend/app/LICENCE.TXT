@@ -1,0 +1,44 @@
+    Copyright (C) 2012 Bazinga Designs
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+	-------------------------------------------------------------------------
+	    
+	This Template was created by Bazinga Designs - www.bazingadesigns.com/en
+	
+	You can use and/or modify it freely for both commercial and non-commercial purpose 
+	as long as you keep the information about the authors, licences and 
+	our link in the footer untouched. You can add your own information next to our link 
+	- thank you!
+	 
+	For full licence text please go to:
+	http://www.gnu.org/copyleft/gpl.html
+	
+	CAUTION!
+	
+	Images, libraries and fonts used as part of this work come under
+	various licences - please visit "LICENCES", "JS" and "CSS" folders and subfolders
+	AND CHECK IF ALL LICENCES MATCH YOUR PROFILE!
+		
+	Specifically, all the images used here (despite the fact that they belong to Creative Commons)
+	are for a presentation purpose only and should be exchanged for your own ones. If you wish to 
+	use any of the images that come with this template on your working site you MUST consult with 
+	their authors. 
+	
+	*THE LIST OF PICTURES AUTHORS AND LINKS TO THEIR FLICKR ACCOUNTS IS IN /licences/picture-authors.txt
+	
+	If in doubt, please e-mail the authors of the pictures and libraries. Although
+	all these elements - as we understood - could be used in this free presentation and 
+	all of them were taken from appriopriate, sources that displayed a Creative Commons, GNU GPL
+	or MIT licences - we do not guarantee that all licences apply in your case.
