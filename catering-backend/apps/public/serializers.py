@@ -21,4 +21,4 @@ class OrderSerializer(serializers.ModelSerializer):
 
 class Food_orderSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Food_order
+        model = FoodOrder

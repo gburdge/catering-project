@@ -6,6 +6,6 @@ admin.site.register(Company)
 admin.site.register(Menu)
 admin.site.register(FoodItem)
 admin.site.register(Order)
-admin.site.register(Food_order)
+admin.site.register(FoodOrder)
 
 
