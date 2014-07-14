@@ -11,18 +11,27 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider, RestangularProvider) {
   $routeProvider
-      .when('/company/:companyId', {
-          templateUrl: 'partials/company.html',
+      .when('/home', {
+          templateUrl: 'partials/home.html',
           controller: 'MyCtrl1'
       })
 
-      .when('/companies', {
-          templateUrl: 'partials/partial2.html',
-          controller: 'CompanyList'
+      .when('/caterer/:catererId', {
+          templateUrl: 'partials/caterer.html',
+          controller: 'MyCtrl1'
+      })
+
+      .when('/caterers', {
+          templateUrl: 'partials/caterer-list.html',
+          controller: 'CatererListCtrl'
+      })
+
+      .when('/menu', {
+          templateUrl: 'partials/menu.html',
+          controller: 'MenuCtrl'
       })
 
       .otherwise({
           redirectTo: '/view1'
       });
-  RestangularProvider.setBaseUrl('http://localhost:8001');
 }]);

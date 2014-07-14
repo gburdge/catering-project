@@ -4,10 +4,10 @@ from serializers import *
 # Create your views here.
 
 
-class CompanyList(generics.ListAPIView):
-    model = Company
-    serializer_class = CompanySerializer
-    queryset = Company.objects.all()
+class CatererList(generics.ListAPIView):
+    model = Caterer
+    serializer_class = CatererSerializer
+    queryset = Caterer.objects.all()
 
 
 class MenuList(generics.ListAPIView):

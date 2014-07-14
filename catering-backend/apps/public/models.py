@@ -3,14 +3,11 @@ from django.db import models
 # Create your models here, i.e.: #photo, ingredients, description, instructions, prep time, total time, tags, favorited
 
 
-class Company(models.Model):
+class Caterer(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=60)
     phone = models.IntegerField(max_length=10)
     menu = models.ForeignKey("Menu", null=True, blank=True)
-
-    class Meta:
-        verbose_name_plural = "Companies"
 
     def __unicode__(self):
         return self.name
