@@ -9,6 +9,9 @@ class Company(models.Model):
     phone = models.IntegerField(max_length=10)
     menu = models.ForeignKey("Menu", null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = "Companies"
+
     def __unicode__(self):
         return self.name
 
