@@ -9,7 +9,6 @@ class Company(models.Model):
     phone = models.IntegerField(max_length=10)
     menu = models.ForeignKey("Menu", null=True, blank=True)
 
-
     def __unicode__(self):
         return self.name
 
@@ -29,7 +28,6 @@ class FoodItem(models.Model):
 
     def __unicode__(self):
         return self.name
-
 
 
 class Order(models.Model):
