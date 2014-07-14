@@ -10,7 +10,7 @@ angular.module('myApp', [
   'myApp.controllers',
   'restangular'
 ]).
-config(['$routeProvider', function($routeProvider, RestangularProvider) {
+config(['$routeProvider', 'RestangularProvider', function($routeProvider, RestangularProvider) {
   $routeProvider
       .when('/home', {
           templateUrl: 'partials/home.html',
@@ -35,4 +35,5 @@ config(['$routeProvider', function($routeProvider, RestangularProvider) {
       .otherwise({
           redirectTo: '/home'
       });
+  RestangularProvider.setBaseUrl('http://127.0.0.1:8001');
 }]);

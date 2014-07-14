@@ -38,10 +38,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.public',
     'south',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 )
 
 MIDDLEWARE_CLASSES = (
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -65,6 +67,14 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
+    'localhost/',
+)
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
