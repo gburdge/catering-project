@@ -25,7 +25,7 @@ class Menu(models.Model):
 class FoodItem(models.Model):
     name = models.CharField(max_length=25)
     type = models.CharField(max_length=25)
-    price = models.DecimalField(max_digits=7, decimal_places=2)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
     image = models.CharField(max_length=500, default="no image")
 
     def __unicode__(self):
