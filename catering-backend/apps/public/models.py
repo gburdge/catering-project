@@ -7,11 +7,7 @@ class Company(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=60)
     phone = models.IntegerField(max_length=10)
-<<<<<<< HEAD
     menu = models.ForeignKey("Menu", null=True, blank=True)
-=======
-    menu = models.ForeignKey("Menu", null=False, blank=False)
->>>>>>> 01c29ec234fce5f061962bf55586b2b50a19f0cc
 
 
     def __unicode__(self):
@@ -20,11 +16,7 @@ class Company(models.Model):
 
 class Menu(models.Model):
     name = models.CharField(max_length=50)
-<<<<<<< HEAD
     FoodItem = models.ForeignKey("FoodItem",null=True,blank=True)
-=======
-    FoodItem = models.ForeignKey("FoodItem", null=False, blank=False)
->>>>>>> 01c29ec234fce5f061962bf55586b2b50a19f0cc
 
     def __unicode__(self):
         return self.name
@@ -33,11 +25,7 @@ class Menu(models.Model):
 class FoodItem(models.Model):
     name = models.CharField(max_length=25)
     type = models.CharField(max_length=25)
-<<<<<<< HEAD
     price = models.DecimalField(max_digits=9,decimal_places=2)
-=======
-    price = models.DecimalField(max_digits=7, decimal_places=2)
->>>>>>> 01c29ec234fce5f061962bf55586b2b50a19f0cc
     image = models.CharField(max_length=500, default="no image")
 
     def __unicode__(self):
