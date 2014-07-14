@@ -9,8 +9,20 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/company', {templateUrl: 'partials/company.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+config(['$routeProvider', function($routeProvider, RestangularProvider) {
+  $routeProvider
+      .when('/company/:companyId', {
+          templateUrl: 'partials/company.html',
+          controller: 'MyCtrl1'
+      })
+
+      .when('/companies', {
+          templateUrl: 'partials/partial2.html',
+          controller: 'CompanyList'
+      })
+
+      .otherwise({
+          redirectTo: '/view1'
+      });
+  RestangularProvider.setBaseUrl('http://localhost:8001');
 }]);
