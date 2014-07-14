@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
-  'myApp.controllers'
+  'myApp.controllers',
+  'restangular'
 ]).
 config(['$routeProvider', function($routeProvider, RestangularProvider) {
   $routeProvider
@@ -32,6 +33,6 @@ config(['$routeProvider', function($routeProvider, RestangularProvider) {
       })
 
       .otherwise({
-          redirectTo: '/view1'
+          redirectTo: '/home'
       });
 }]);
