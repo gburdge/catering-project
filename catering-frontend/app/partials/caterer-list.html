@@ -1,5 +1,5 @@
 <p>This is the list of all companies in the database.</p>
 
 <ul>
-    <li ng-repeat="caterer in caterers">{{ caterer.name }}</li>
+ <li ng-repeat="caterer in caterers"><a href="caterer/{{ caterer.id }}">{{ caterer.name }}</a>: {{ caterer.phone }}</li>
 </ul>

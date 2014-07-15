@@ -11,10 +11,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^caterers/$', CatererList.as_view(), name='company-list'),
+    url(r'^caterers/$', CatererList.as_view(), name='caterer-list'),
     url(r'^menus/$', MenuList.as_view(), name='menu-list'),
     url(r'^fooditem/$', FoodItem.as_view(), name='food-list'),
     url(r'^order/$', OrderList.as_view(), name='order-list'),
-    url(r'^food_order/$', FoodOrderList.as_view(), name='food_order-list'),
+    url(r'^food-order/$', FoodOrderList.as_view(), name='food_order-list'),
 
     )
