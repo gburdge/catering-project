@@ -19,7 +19,7 @@ config(['$routeProvider', 'RestangularProvider', function($routeProvider, Restan
 
       .when('/caterer/:catererId', {
           templateUrl: 'partials/caterer.html',
-          controller: 'MyCtrl1'
+          controller: 'CatererDetailCtrl'
       })
 
       .when('/caterers', {
