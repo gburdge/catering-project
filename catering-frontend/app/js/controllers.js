@@ -17,6 +17,11 @@ angular.module('myApp.controllers', [])
         Restangular.one('caterer', $scope.catererId).customGET().then(function (data) {
             $scope.caterer = data;
         });
+
+        $scope.quantity = 0
+        $scope.incrementQuantity = function() {
+            $scope.quantity += 1;
+        }
     })
 
     .controller('FoodItemCtrl', function ($scope, Restangular, $routeParams) {

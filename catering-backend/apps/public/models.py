@@ -26,14 +26,15 @@ class FoodItem(models.Model):
 class Order(models.Model):
     delivery_date = models.DateField(max_length=25)
     delivery_time = models.TimeField(max_length=10)
-    order = models.TextField(max_length=100)
+    delivery_location = models.TextField()
 
     def __unicode__(self):
         return self.name
 
 
 class FoodOrder(models.Model):
-    FoodItem = models.CharField(max_length=25)
+    order = models.ForeignKey("Order")
+    food_item = models.OneToOneField("FoodItem")
     quantity = models.IntegerField(max_length=10)
 
     def __unicode__(self):
