@@ -6,15 +6,17 @@ class CatererSerializer(serializers.ModelSerializer):
     class Meta:
         model = Caterer
 
-
-class MenuSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Menu
-
-
 class FoodItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodItem
+
+
+class MenuSerializer(serializers.ModelSerializer):
+
+    FoodItem = FoodItemSerializer()
+
+    class Meta:
+        model = Menu
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -25,3 +27,10 @@ class OrderSerializer(serializers.ModelSerializer):
 class Food_orderSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodOrder
+
+class NestedCaterer(serializers.ModelSerializer):
+
+    menu = MenuSerializer()
+
+    class Meta:
+        model = Caterer
