@@ -4,16 +4,26 @@
 
 angular.module('myApp.controllers', [])
     .controller('CatererListCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
-        Restangular.all('caterers').getList().then(function (blahblahblah) {
-            $scope.caterers = blahblahblah;
+        Restangular.all('caterers').getList().then(function (data) {
+            $scope.caterers = data;
         });
     }])
 
     .controller('CatererDetailCtrl', function ($scope, Restangular, $routeParams) {
         $scope.catererId = $routeParams.catererId;
 
-        Restangular.one('recipes', $scope.catererId).customGET().then(function (data) {
+        Restangular.one('caterer', $scope.catererId).customGET().then(function (data) {
             $scope.caterer = data;
-
         });
     })
+
+    .controller('MenuCtrl', function ($scope, Restangular, $routeParams) {
+        $scope.catererId = $routeParams.catererId;
+
+        Restangular.one('caterer', $scope.menu).customGET().then(function (data) {
+            $scope.caterer = data;
+        });
+    });
+
+
+
