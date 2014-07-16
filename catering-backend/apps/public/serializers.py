@@ -23,7 +23,7 @@ class Food_orderSerializer(serializers.ModelSerializer):
 
 
 class NestedCaterer(serializers.ModelSerializer):
-
-
     class Meta:
         model = Caterer
+
+
