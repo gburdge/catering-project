@@ -5,6 +5,17 @@
 " alt="arroz con pollo y platano"width="42" height="42">
 <p>{{ caterer.address }}</p>
 <p>{{ caterer.phone }}</p>
-<ul>
-    <li ng-repeat="food_item in caterer.food_item">{{ food_item.name }}</li>
-</ul>
+<table>
+    <thead>
+        <th style="border: 1px solid #000000; padding: 10px;">Name</th>
+        <th style="border: 1px solid #000000; padding: 10px;">Type</th>
+        <th style="border: 1px solid #000000; padding: 10px;">Price</th>
+        <th style="border: 1px solid #000000; padding: 10px;">Image</th>
+    </thead>
+    <tr ng-repeat="food_item in caterer.food_item">
+        <td style="border: 1px solid #000000; padding: 10px;">{{ food_item.name }}</td>
+        <td style="border: 1px solid #000000; padding: 10px;">{{ food_item.type }}</td>
+        <td style="border: 1px solid #000000; padding: 10px;">${{ food_item.price }}</td>
+        <td style="border: 1px solid #000000; padding: 10px;">{{ food_item.image }}</td>
+    </tr>
+</table>

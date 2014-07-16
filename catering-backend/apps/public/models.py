@@ -13,7 +13,6 @@ class Caterer(models.Model):
         return self.name
 
 
-
 class FoodItem(models.Model):
     name = models.CharField(max_length=25)
     type = models.CharField(max_length=25)
