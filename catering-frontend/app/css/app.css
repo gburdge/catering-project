@@ -36,3 +36,8 @@ table, th, td {
 .food-list-images {
     max-width: 150px;
 }
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+}

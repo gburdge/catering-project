@@ -1,26 +1,31 @@
-<p>This is the partial view for one specific caterer.</p>
+<div class="container">
+    <p>This is the partial view for one specific caterer.</p>
 
-<label>Name:</label>
-<p>{{ caterer.name }}</p>
+    <label>Name:</label>
 
-<label>Address:</label>
-<p>{{ caterer.address }}</p>
+    <p>{{ caterer.name }}</p>
 
-<label>Phone:</label>
-<p>{{ caterer.phone }}</p>
+    <label>Address:</label>
 
-<label>Food Items:</label>
-<table>
-    <thead>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Price</th>
-        <th>Image</th>
-    </thead>
-    <tr ng-repeat="food_item in caterer.food_item">
-        <td>{{ food_item.name }}</td>
-        <td>{{ food_item.type }}</td>
-        <td>${{ food_item.price }}</td>
-        <td><img class="food-list-images" src="img/{{ food_item.image }}"></td>
-    </tr>
-</table>
+    <p>{{ caterer.address }}</p>
+
+    <label>Phone:</label>
+
+    <p>{{ caterer.phone }}</p>
+
+    <label>Food Items:</label>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Image</th>
+        </thead>
+        <tr ng-repeat="food_item in caterer.food_item">
+            <td>{{ food_item.name }}</td>
+            <td>{{ food_item.type }}</td>
+            <td>${{ food_item.price }}</td>
+            <td><img class="food-list-images" src="img/{{ food_item.image }}"></td>
+        </tr>
+    </table>
+</div>
