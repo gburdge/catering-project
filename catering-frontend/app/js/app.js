@@ -28,7 +28,7 @@ config(['$routeProvider', 'RestangularProvider', function($routeProvider, Restan
       })
 
       .when('/menu', {
-          templateUrl: 'partials/menu.html',
+          templateUrl: 'partials/food_items.html',
           controller: 'MenuCtrl'
       })
 

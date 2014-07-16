@@ -17,10 +17,10 @@ angular.module('myApp.controllers', [])
         });
     })
 
-    .controller('MenuCtrl', function ($scope, Restangular, $routeParams) {
+    .controller('FoodItemCtrl', function ($scope, Restangular, $routeParams) {
         $scope.catererId = $routeParams.catererId;
 
-        Restangular.one('caterer', $scope.menu).customGET().then(function (data) {
+        Restangular.one('caterer', $scope.FoodItem).customGET().then(function (data) {
             $scope.caterer = data;
         });
     });
