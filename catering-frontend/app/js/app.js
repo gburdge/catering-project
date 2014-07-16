@@ -27,9 +27,9 @@ config(['$routeProvider', 'RestangularProvider', function($routeProvider, Restan
           controller: 'CatererListCtrl'
       })
 
-      .when('/menu', {
+      .when('/caterer-list.html', {
           templateUrl: 'partials/food_items.html',
-          controller: 'MenuCtrl'
+          controller: 'FoodItemCtrl'
       })
 
       .otherwise({
