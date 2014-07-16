@@ -3,7 +3,6 @@ from models import *
 
 # Register your models here.
 admin.site.register(Caterer)
-admin.site.register(Menu)
 admin.site.register(FoodItem)
 admin.site.register(Order)
 admin.site.register(FoodOrder)

@@ -17,18 +17,6 @@ class CatererDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Caterer.objects.all()
 
 
-class MenuDetail(generics.RetrieveUpdateDestroyAPIView):
-    # permission_classes = (permissions.IsAuthenticated,)
-    model = Menu
-    serializer_class = MenuSerializer
-    queryset = Menu.objects.all()
-
-
-class MenuList(generics.ListAPIView):
-    model = Menu
-    serializer_class = MenuSerializer
-    queryset = Menu.objects.all()
-
 
 class FoodItem(generics.ListAPIView):
     model = FoodItem
@@ -36,10 +24,12 @@ class FoodItem(generics.ListAPIView):
     queryset = FoodItem.objects.all()
 
 
+
 class OrderList(generics.ListAPIView):
     model = Order
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
+
 
 
 class FoodOrderList(generics.ListAPIView):

@@ -7,18 +7,11 @@ class Caterer(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=60, null=True, blank=True)
     phone = models.IntegerField(max_length=10, null=True, blank=True)
-    menu = models.ForeignKey("Menu", null=True, blank=True)
+    food_item = models.ForeignKey("FoodItem", null=True, blank=True)
 
     def __unicode__(self):
         return self.name
 
-
-class Menu(models.Model):
-    name = models.CharField(max_length=50)
-    FoodItem = models.ForeignKey("FoodItem",null=True,blank=True)
-
-    def __unicode__(self):
-        return self.name
 
 
 class FoodItem(models.Model):
