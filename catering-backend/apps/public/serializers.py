@@ -3,30 +3,31 @@ from rest_framework import serializers
 
 
 class CatererSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Caterer
 
 
 class FoodItemSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = FoodItem
 
 
 class OrderSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Order
 
 
-class Food_orderSerializer(serializers.ModelSerializer):
+class FoodOrderSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = FoodOrder
 
 
-class NestedCaterer(serializers.ModelSerializer):
+class NestedCatererSerializer(serializers.ModelSerializer):
     food_item = FoodItemSerializer()
-
 
     class Meta:
         model = Caterer
-
-

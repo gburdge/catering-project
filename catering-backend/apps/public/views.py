@@ -6,16 +6,15 @@ from serializers import *
 
 class CatererList(generics.ListAPIView):
     model = Caterer
-    serializer_class = NestedCaterer
+    serializer_class = NestedCatererSerializer
     queryset = Caterer.objects.all()
 
 
 class CatererDetail(generics.RetrieveUpdateDestroyAPIView):
     # permission_classes = (permissions.IsAuthenticated,)
     model = Caterer
-    serializer_class = NestedCaterer
+    serializer_class = NestedCatererSerializer
     queryset = Caterer.objects.all()
-
 
 
 class FoodItem(generics.ListAPIView):
@@ -24,17 +23,14 @@ class FoodItem(generics.ListAPIView):
     queryset = FoodItem.objects.all()
 
 
-
 class OrderList(generics.ListAPIView):
     model = Order
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
 
 
-
 class FoodOrderList(generics.ListAPIView):
     model = FoodOrder
-    serializer_class = Food_orderSerializer
+    serializer_class = FoodOrderSerializer
     queryset = FoodOrder.objects.all()
-
 
