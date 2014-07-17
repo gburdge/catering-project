@@ -18,10 +18,28 @@ angular.module('myApp.controllers', [])
             $scope.caterer = data;
         });
 
-        $scope.quantity = 0
-        $scope.incrementQuantity = function() {
-            $scope.quantity += 1;
+
+        $scope.increment_Qty= function(food_item) {
+
+           food_item.quantity += 1;
+
         }
+        $scope.decrease_Qty= function(food_item){
+
+            if (food_item.quantity > 0){
+                    food_item.quantity -= 1;
+            }
+
+        }
+
+        $scope.calculatePrice= function(food_item){
+
+            var price =  food_item.price * food_item.quantity;
+
+            return "$"+price.toFixed(2);
+
+        }
+
     })
 
     .controller('FoodItemCtrl', function ($scope, Restangular, $routeParams) {

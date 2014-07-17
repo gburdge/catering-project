@@ -31,17 +31,17 @@
             <td>
                 <button
 
-                    ng-click="count = count + 1"
-                    ng-init="count=0">
+                    ng-click="increment_Qty(food_item)"
+                    ng-init="food_item.quantity=0">
                         Add Item
                 </button>
-                Quantity: {{count}}
-
+                Quantity: {{food_item.quantity}}
                 <button
-                    ng-click="count = count - 1"
-                    ng-init="count=0">
+                    ng-click="decrease_Qty(food_item)">
                         Delete Item
                 </button>
+
+                <p ng-bind="calculatePrice(food_item)"></p>
 
 
             </td>
