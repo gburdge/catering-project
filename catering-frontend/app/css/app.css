@@ -6,6 +6,12 @@
   padding: 0 0 0.5em;
 }
 
+body {
+    background-image: url('../img/backgrounds/restaurantbackground.png');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
 .menu:before {
   content: "[";
 }
@@ -39,9 +45,25 @@ table, th, td {
 
 .container {
     width: 90%;
-    margin: 20px auto;
+    height: 100%;
+    margin: 0 auto 0;
+    background-color: lightyellow;
 }
 
 .fa.fa-envelope {
     color: #2cbeff;
+}
+
+.caterer-list h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.caterer-list ul {
+    list-style-type: none;
+}
+
+.caterer-list li {
+    margin-bottom: 10px;
+    font-size: 1.5em;
 }
