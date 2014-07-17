@@ -41,3 +41,7 @@ table, th, td {
     width: 90%;
     margin: 20px auto;
 }
+
+.fa.fa-envelope {
+    color: #2cbeff;
+}
