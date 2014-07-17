@@ -30,7 +30,6 @@
 
             <td>
                 <button
-
                     ng-click="increment_Qty(food_item)"
                     ng-init="food_item.quantity=0">
                         Add Item
@@ -42,7 +41,6 @@
                 </button>
 
                 <p ng-bind="calculatePrice(food_item)"></p>
-
 
             </td>
         </tr>
@@ -57,9 +55,17 @@
             <th>Item</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>Total</th>
-
-          </thead>
+        </thead>
+            <tr ng-repeat="food_item in order.items">
+                <td>{{food_item.name}}</td>
+                <td>{{calculatePrice(food_item)}}</td>
+                <td>{{food_item.quantity}}</td>
+            <tr>
+            <tr>
+                <td>Total</td>
+                <td>{{"$" + order.totalCost.toFixed(2)}}</td>
+                <td>{{ order.itemCount }}</td>
+            </tr>
          </table>
 
 </div>
