@@ -35,5 +35,5 @@ config(['$routeProvider', 'RestangularProvider', function($routeProvider, Restan
       .otherwise({
           redirectTo: '/home'
       });
-  RestangularProvider.setBaseUrl('http://127.0.0.1:8001');
+  RestangularProvider.setBaseUrl('catering.codingcorner.us/api');
 }]);
