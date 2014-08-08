@@ -45,12 +45,9 @@ table, th, td {
 
 .container {
     width: 90%;
-<<<<<<< HEAD
-    margin: 0 auto;
-=======
     height: 100%;
     margin: 0 auto 0;
->>>>>>> b384e8ff86d00b7aaedc60667dfe42952a7584b8
+
     background-color: lightyellow;
 }
 
