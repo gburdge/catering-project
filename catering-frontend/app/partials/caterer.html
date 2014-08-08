@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="centered-table">
+        <h1>{{ caterer.name }}</h1>
+
+        <label>Address:</label>
+
+        <p>{{ caterer.address }}</p>
+
+        <label>Phone:</label>
+
+        <p>{{ caterer.phone }}</p>
+
+        <label>Food Items:</label>
+        <table>
+            <thead>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Order Here !</th>
+            </thead>
+            <tr ng-repeat="food_item in caterer.food_item">
+                <td>{{ food_item.name }}</td>
+                <td>{{ food_item.type }}</td>
+                <td>${{ food_item.price }}</td>
+                <td><img class="food-list-images" src="img/{{ food_item.image }}"></td>
+
+                <td>
+                    <button
+                            ng-click="increment_Qty(food_item)"
+                            ng-init="food_item.quantity=0">
+                        Add Item
+                    </button>
+                    Quantity: {{ food_item.quantity }}
+                    <button
+                            ng-click="decrease_Qty(food_item)">
+                        Delete Item
+                    </button>
+
+                    <p ng-bind="calculatePrice(food_item)"></p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="container centered-table">
+        <label>Your order</label>
+        <table>
+            <thead>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            </thead>
+            <tr ng-repeat="food_item in order.items">
+                <td>{{ food_item.name }}</td>
+                <td>{{ calculatePrice(food_item)}}</td>
+                <td>{{ food_item.quantity }}</td>
+            <tr>
+            <tr>
+                <td>Total</td>
+                <td>{{ "$" + order.totalCost.toFixed(2)}}</td>
+                <td>{{ order.itemCount }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
